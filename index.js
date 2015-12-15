@@ -2,8 +2,6 @@ var TelegramBot = require('node-telegram-bot-api');
 
 require('util').inherits(ServerLogger, require('events').EventEmitter);
 
-module.exports = ServerLogger;
-
 function ServerLogger(options) {
 	this.colors = {
 		'white': 	['\x1B[37m', '\x1B[39m'],
@@ -105,11 +103,9 @@ ServerLogger.prototype.channelAdd = function(options) {
 	
 	this.channelOptions[options.level] = options;
 
-	var channel = function(message) {
+	this.logs[options.name] = function(message) {
 		self._send(options, message);
 	}
-
-	eval('this.logs.'+options.name+" = channel");
 }
 
 ServerLogger.prototype._formatMsgConsole = function(channel, msg)
@@ -126,3 +122,5 @@ ServerLogger.prototype._formatMsgFile = function(channel, msg)
 
 	return date+channel.name+": "+msg+"\n";
 }
+
+module.exports = ServerLogger;
