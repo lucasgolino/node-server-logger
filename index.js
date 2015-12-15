@@ -8,14 +8,14 @@ function ServerLogger(options) {
 	this.colors = {
 		'white': 	['\x1B[37m', '\x1B[39m'],
 		'gray': 	['\x1B[90m', '\x1B[39m'],
-	    'grey': 	['\x1B[90m', '\x1B[39m'],
-	    'black': 	['\x1B[30m', '\x1B[39m'],
-	    'blue': 	['\x1B[34m', '\x1B[39m'],
-	    'cyan': 	['\x1B[36m', '\x1B[39m'],
-	    'green': 	['\x1B[32m', '\x1B[39m'],
-	    'magenta': 	['\x1B[35m', '\x1B[39m'],
-	    'red': 		['\x1B[31m', '\x1B[39m'],
-	    'yellow': 	['\x1B[33m', '\x1B[39m']
+		'grey': 	['\x1B[90m', '\x1B[39m'],
+		'black': 	['\x1B[30m', '\x1B[39m'],
+		'blue': 	['\x1B[34m', '\x1B[39m'],
+		'cyan': 	['\x1B[36m', '\x1B[39m'],
+		'green': 	['\x1B[32m', '\x1B[39m'],
+		'magenta': 	['\x1B[35m', '\x1B[39m'],
+		'red': 		['\x1B[31m', '\x1B[39m'],
+		'yellow': 	['\x1B[33m', '\x1B[39m']
 	};
 
 	this.logs = {};
