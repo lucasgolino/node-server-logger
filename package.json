@@ -1,6 +1,6 @@
 {
   "name": "server-logger",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "NodeJS console logger",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/lucasgolino/node-server-logger/issues"
   },
   "homepage": "https://github.com/lucasgolino/node-server-logger#readme",
-  "devDependencies": {
+  "dependencies": {
     "node-telegram-bot-api": "^0.17.0"
   }
 }
