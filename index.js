@@ -43,7 +43,7 @@ ServerLogger.prototype._send = function(channel, msg) {
 	console.log(this._formatMsgConsole(channel, msg));
 
 	if(channel.logger && this.options.enableLogs)
-		if(this.options.customLogsEvent)
+		if(this.options.customLogsEvent == false)
 			this._addLogs(channel.loggerFile, this._formatMsgFile(channel, msg));
 		else
 			this.emit('logger', channel, msg);
