@@ -1,7 +1,7 @@
 # Server Logger for Node.js
 [![npm version](https://img.shields.io/npm/v/node-server-logger.svg)](https://www.npmjs.com/package/node-server-logger)
-[![npm downloads](https://img.shields.io/npm/dm/steamcommunity.svg)](https://npmjs.com/package/node-server-logger)
-[![license](https://img.shields.io/npm/l/steamcommunity.svg)](https://github.com/lucasgolino/node-server-logger/blob/master/LICENSE)
+[![npm downloads](https://img.shields.io/npm/dm/node-server-logger.svg)](https://npmjs.com/package/node-server-logger)
+[![license](https://img.shields.io/npm/l/node-server-logger.svg)](https://github.com/lucasgolino/node-server-logger/blob/master/LICENSE)
 
 
 This module provide an easy way to output console informations with custons tags and store on files.
