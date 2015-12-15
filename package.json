@@ -1,6 +1,6 @@
 {
   "name": "node-server-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NodeJS console logger",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "log"
   ],
   "author": "Lucas Golino <lucasgolino@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lucasgolino/node-server-logger/issues"
   },
