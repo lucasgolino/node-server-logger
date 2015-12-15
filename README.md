@@ -41,11 +41,11 @@ Install it from npm:
 	});
 
 -`channel` - is a object with channel infos
---`name` - name of channel.
---`level` - level of channel.
---`logger` - if this channel have logs output to file.
---`loggerFile` - name of file to store channel logs.
---`color` - object with color (see below)
+	-`name` - name of channel.
+	-`level` - level of channel.
+	-`logger` - if this channel have logs output to file.
+	-`loggerFile` - name of file to store channel logs.
+	-`color` - object with color (see below)
 
 ## Colors
 
