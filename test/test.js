@@ -1,9 +1,10 @@
 var ServerLogger = require('../index.js');
 
 var logger = new ServerLogger({
-	"enableLogs": true,
-	"customLogsEvent": true,
-	"dateOnLogs": true
+	"enableLogs": false,
+
+	"enableStreamTelegram": true,
+	"telegram_token": ''
 });
 
 logger.channelAdd({
@@ -15,7 +16,9 @@ logger.channelAdd({
 logger.channelAdd({
 	"name": 'info',
 	"level": 2,
-	"color": logger.colors.green
+	"color": logger.colors.green,
+	"telegramStream": true,
+	"telegramChat_id": ""
 });
 
 logger.logs.error("Error testing");

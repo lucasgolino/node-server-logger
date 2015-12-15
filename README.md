@@ -29,9 +29,12 @@ logger.logs.info("Info testing");
 
 ## Init Options
 - `enableLogs` - Enable output logs on files. default: `true`
-- `defaultFolderLogs` - Folder to save our logs. default: ` `
+- `defaultFolderLogs` - Folder to save logs. default: ` `
 - `customLogsEvent` - Custom event when log is emit (see below). default: `false`
 - `dateOnLogs` - Input the time of logs when append to file. default: `false`
+
+- `enableStreamTelegram` - Enable stream logs to telegram bot. default: `false`
+- `telegram_token` - Telegram BOT Token
 
 ## Events
 - `logger` - called when `customLogsEvent` is set `true`.
@@ -48,11 +51,13 @@ logger.on('logger', function(channel, msg) {
 	- `logger` - if this channel have logs output to file.
 	- `loggerFile` - name of file to store channel logs.
 	- `color` - object with color (see below)
+	- `telegramStream` - Enable telegram stream to channel.
+	- `telegramChat_id` - Chat_id for stream to telegram.
 
 ## Colors
 
 ```js
-logger.colors.hite
+logger.colors.white
 logger.colors.gray
 logger.colors.grey
 logger.colors.black

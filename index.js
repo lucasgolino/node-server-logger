@@ -1,3 +1,5 @@
+var TelegramBot = require('node-telegram-bot-api');
+
 require('util').inherits(ServerLogger, require('events').EventEmitter);
 
 module.exports = ServerLogger;
@@ -25,7 +27,10 @@ function ServerLogger(options) {
 		"enableLogs": true,
 		"defaultFolderLogs": "",
 		"customLogsEvent": false,
-		"dateOnLogs": false
+		"dateOnLogs": false,
+
+		"enableStreamTelegram": false,
+		"telegram_token": ''
 	};
 
 	for (var i in defaultOptions) {
@@ -35,12 +40,18 @@ function ServerLogger(options) {
 		if(typeof this.options[i] === 'undefined')
 			this.options[i] = defaultOptions[i];
 	};
+
+	if(this.options.enableStreamTelegram)
+		this.bot = new TelegramBot(this.options.telegram_token, {polling: true});
 }
 
 
 ServerLogger.prototype._send = function(channel, msg) {
 
 	console.log(this._formatMsgConsole(channel, msg));
+
+	if(this.options.enableStreamTelegram && channel.telegramStream)
+		this.bot.sendMessage(channel.telegramChat_id, this._formatMsgFile(channel, msg));
 
 	if(channel.logger && this.options.enableLogs)
 		if(this.options.customLogsEvent == false)
@@ -59,7 +70,9 @@ ServerLogger.prototype._addLogs = function(file, msg)
 				'level': 0,
 				'logger': false,
 				'loggerFile': '',
-				'color': self.colors.red
+				'color': self.colors.red,
+				'telegramStream': false,
+				'telegramChat_id': 0
 			};
 
 			self._send(internalError, err);
@@ -75,7 +88,9 @@ ServerLogger.prototype.channelAdd = function(options) {
 		'level': 1,
 		'logger': true,
 		'loggerFile': 'info.log',
-		'color': this.colors.green
+		'color': this.colors.green,
+		'telegramStream': false,
+		'telegramChat_id': 0
 	};
 
 	options = options || {};

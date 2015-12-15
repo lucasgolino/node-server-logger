@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/lucasgolino/node-server-logger/issues"
   },
-  "homepage": "https://github.com/lucasgolino/node-server-logger#readme"
+  "homepage": "https://github.com/lucasgolino/node-server-logger#readme",
+  "devDependencies": {
+    "node-telegram-bot-api": "^0.17.0"
+  }
 }
