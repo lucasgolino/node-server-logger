@@ -1,6 +1,6 @@
 # Server Logger for Node.js
-[![npm version](https://img.shields.io/npm/v/server-logger.svg)](https://www.npmjs.com/package/node-server-logger)
-[![npm downloads](https://img.shields.io/npm/dm/server-logger.svg)](https://npmjs.com/package/node-server-logger)
+[![npm version](https://img.shields.io/npm/v/server-logger.svg)](https://www.npmjs.com/package/server-logger)
+[![npm downloads](https://img.shields.io/npm/dm/server-logger.svg)](https://npmjs.com/package/server-logger)
 [![license](https://img.shields.io/npm/l/server-logger.svg)](https://github.com/lucasgolino/node-server-logger/blob/master/LICENSE)
 
 
