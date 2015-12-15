@@ -23,9 +23,9 @@ logger.channelAdd({
 	"level": 1,
 	"color": logger.colors.green
 });
-```
 
 logger.logs.info("Info testing");
+```
 
 ## Init Options
 - `enableLogs` - Enable output logs on files. default: `true`
