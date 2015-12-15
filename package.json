@@ -1,0 +1,24 @@
+{
+  "name": "node-server-logger",
+  "version": "1.0.0",
+  "description": "NodeJS console logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasgolino/node-server-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "logs",
+    "log"
+  ],
+  "author": "Lucas Golino <lucasgolino@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasgolino/node-server-logger/issues"
+  },
+  "homepage": "https://github.com/lucasgolino/node-server-logger#readme"
+}
