@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/npm/l/server-logger.svg)](https://github.com/lucasgolino/node-server-logger/blob/master/LICENSE)
 
 
-This module provide an easy way to output console informations with custons tags and store on files.
+This module provide an easy way to output console informations with custom tags and store on files.
 
 # Installation
 
