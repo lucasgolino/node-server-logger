@@ -27,8 +27,10 @@ function ServerLogger(options) {
         "customLogsEvent": false,
         "dateOnLogs": false,
 
-        "enableStreamTelegram": false,
-        "telegram_token": ''
+        "telegram": {
+            "enable": false,
+            "token": ''
+        }
     };
 
     for (var i in defaultOptions) {
@@ -39,8 +41,8 @@ function ServerLogger(options) {
             this.options[i] = defaultOptions[i];
     };
 
-    if(this.options.enableStreamTelegram)
-        this.bot = new TelegramBot(this.options.telegram_token, {polling: true});
+    if(this.options.telegram.enable)
+        this.bot = new TelegramBot(this.options.telegram.token, {polling: true});
 }
 
 
@@ -48,8 +50,8 @@ ServerLogger.prototype._send = function(channel, msg) {
 
     console.log(this._formatMsgConsole(channel, msg));
 
-    if(this.options.enableStreamTelegram && channel.telegramStream)
-        this.bot.sendMessage(channel.telegramChat_id, this._formatMsgFile(channel, msg));
+    if(this.options.telegram.enable && channel.telegram.stream)
+        this.bot.sendMessage(channel.telegram.chatid, this._formatMsgFile(channel, msg));
 
     if(channel.logger && this.options.enableLogs)
         if(this.options.customLogsEvent == false)
@@ -69,8 +71,10 @@ ServerLogger.prototype._addLogs = function(file, msg)
                 'logger': false,
                 'loggerFile': '',
                 'color': self.colors.red,
-                'telegramStream': false,
-                'telegramChat_id': 0
+                'telegram': {
+                    'stream': false,
+                    'chatid': 0
+                }
             };
 
             self._send(internalError, err);
@@ -87,8 +91,10 @@ ServerLogger.prototype.channelAdd = function(options) {
         'logger': true,
         'loggerFile': 'info.log',
         'color': this.colors.green,
-        'telegramStream': false,
-        'telegramChat_id': 0
+        'telegram': {
+            'stream': false,
+            'chat_id': 0
+        }
     };
 
     options = options || {};

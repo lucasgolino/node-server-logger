@@ -33,8 +33,9 @@ logger.logs.info("Info testing");
 - `customLogsEvent` - Custom event when log is emit (see below). default: `false`
 - `dateOnLogs` - Input the time of logs when append to file. default: `false`
 
-- `enableStreamTelegram` - Enable stream logs to telegram bot. default: `false`
-- `telegram_token` - Telegram BOT Token
+- `telegram` - Telegram JSON Config
+	- `enable` - Enable stream logs to telegram bot. default: `false`
+	- `token` - Telegram BOT Token
 
 ## Events
 - `logger` - called when `customLogsEvent` is set `true`.
@@ -51,8 +52,9 @@ logger.on('logger', function(channel, msg) {
 	- `logger` - if this channel have logs output to file.
 	- `loggerFile` - name of file to store channel logs.
 	- `color` - object with color (see below)
-	- `telegramStream` - Enable telegram stream to channel.
-	- `telegramChat_id` - Chat_id for stream to telegram.
+	- `telegram` - Telegram channel infos Object
+		- `stream` - Enable telegram stream to channel.
+		- `chatid` - Chat ID for stream to telegram.
 
 ## Colors
 
