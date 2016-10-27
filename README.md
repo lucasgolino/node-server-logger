@@ -37,6 +37,12 @@ logger.logs.info("Info testing");
 	- `enable` - Enable stream logs to telegram bot. default: `false`
 	- `token` - Telegram BOT Token
 
+- `irc` - IRC Stream Config
+	- `enable` - Enable stream logs to IRC. default: `false`
+	- `server` - Server host. default: `null`
+	- `nick` - IRC Bot Client Name. default: `null`
+	- `password` - Server Password. default: `null`
+
 ## Events
 - `logger` - called when `customLogsEvent` is set `true`.
 
@@ -55,6 +61,10 @@ logger.on('logger', function(channel, msg) {
 	- `telegram` - Telegram channel infos Object
 		- `stream` - Enable telegram stream to channel.
 		- `chatid` - Chat ID for stream to telegram.
+	- `irc` - IRC channel infos Object
+		- `stream` - Enable IRC Stream to channel.
+		- `channel` - #channel IRC for this log.
+		- `password` - #channel password.
 
 ## Colors
 
