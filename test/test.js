@@ -3,24 +3,30 @@ var ServerLogger = require('../index.js');
 var logger = new ServerLogger({
 	"enableLogs": false,
 
-	"enableStreamTelegram": true,
-	"telegram_token": ''
-});
-
-logger.channelAdd({
-	"name": 'error',
-	"level": 1,
-	"color": logger.colors.red
+	"irc": {
+		'enable': true,
+		'server': 'irc.yourserver.net',
+		'nick': 'bot_speak_a_lot',
+		'channel': '#main'
+	}
 });
 
 logger.channelAdd({
 	"name": 'info',
-	"level": 2,
-	"color": logger.colors.green,
-	"telegramStream": true,
-	"telegramChat_id": ""
+	"level": 1,
+	"color": logger.colors.red,
+	'irc': {
+		'stream': true,
+		'channel': '#main',
+		'password': null
+	}
 });
 
-logger.logs.error("Error testing");
-logger.logs.info("Info testing");
+setTimeout(function() {
+	logger.logs.info('HEY! I\' here');
+}, 5000);
+
+setTimeout(function() {
+	logger.logs.info('a lot a lot a lot a lot........! alaways a lot!');
+}, 10000);
 
