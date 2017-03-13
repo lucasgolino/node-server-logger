@@ -80,3 +80,14 @@ logger.colors.magenta
 logger.colors.red
 logger.colors.yellow
 ```
+
+
+## Donation
+
+Please, if you want support this code and me.
+
+```
+BTC: 1Gc59kDgPvm7gUnGEhTut7hLo48ks2gZij 
+```
+
+
